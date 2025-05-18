@@ -1,4 +1,4 @@
-## Steam age bypass for Linux
+## Steam age bypass
 Bypasses the annoying age prompts in the Steam client, by patching certain files of the Steam client. This works regardles if Steam is restarted or not.
 Steam does not save your age in the client or either thier servers when u get promted. Hence, you keep getting these. This apperantly has something do do with legal stuff.
 
