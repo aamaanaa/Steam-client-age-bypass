@@ -2,6 +2,15 @@
 Bypasses the annoying age prompts in the Steam client, by patching certain files of the Steam client. This works regardles if Steam is restarted or not.
 Steam does not save your age in the client or either thier servers when u get promted. Hence, you keep getting these. This apperantly has something do do with legal stuff.
 
+## Support
+Only Linux is supported. If the need for other operating systems is required, ask me, open a issue, or create a pull request.
+
+### Tested on
+The tool has been confirmed working on:
+
+- Fedora 42 Gnome (non flatpak version)
+- Steam deck
+
 ## Usage
 First, completly close steam. Second, choose one of the below 3 methods to run the age bypass.
 
@@ -31,9 +40,3 @@ See virustotal for the scan on the latest release:
 
 ### UPX
 The steam age bypass is upx packed to reduce size and thus reducing download time, for the curl command and downloading from the releases. U can unpack it with `upx -d steam-age-bypass.elf`
-
-## Support
-Only Linux is supported. If the need for other operating systems is required, ask me, open a issue, or create a pull request.
-
-### Tested on
-Tested on Fedora 42 Work station. Flatpak support needs to be tested.
