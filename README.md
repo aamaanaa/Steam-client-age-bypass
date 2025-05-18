@@ -3,7 +3,6 @@ Bypasses the annoying age prompts in the Steam client, by patching certain files
 Steam does not save your age in the client or either thier servers when u get promted. Hence, you keep getting these. This apperantly has something do do with legal stuff.
 
 ## Usage
-
 First, completly close steam. Second, choose one of the below 3 methods to run the age bypass.
 
 ### 1. Direct run in terminal
@@ -24,11 +23,17 @@ Make it executable with `chmod +x steam-age-bypass.elf` and run with `./steam-ag
 ### 3. Compile it yourself
 Simply clone the repo, cd into the cloned folder, and compile it for linux.
 
-### Source code
-The source code of the relases executable can be found in the `main.go` file in this repository.
+## Security
+
+### Virustotal
+See virustotal for the scan on the latest release:
+- https://www.virustotal.com/gui/file/baf6ddf56e10cc61b3b9ac0e6e71df502f132c49b527f653c56886a31ea502d2/details
+
+### UPX
+The steam age bypass is upx packed to reduce size and thus reducing download time, for the curl command and downloading from the releases. U can unpack it with `upx -d steam-age-bypass.elf`
 
 ## Support
 Only Linux is supported. If the need for other operating systems is required, ask me, open a issue, or create a pull request.
 
-## Tested
+### Tested on
 Tested on Fedora 42 Work station. Flatpak support needs to be tested.
