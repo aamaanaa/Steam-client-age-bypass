@@ -4,11 +4,11 @@ Steam often asks users to verify their age when accessing mature-rated games in 
 ## Usage
 
 ### Linux
-> Make sure **Steam is completely closed** before running.  
+> Make sure **Steam is completely closed** before running.
+
 > Flatpak installations are currently **untested**.
 
 #### Option 1: One-liner Install
-
 1. Open up a terminal.
 2. Run the following command:
 ```bash
@@ -22,11 +22,12 @@ You can download a precompiled executable from the releases. Make it executable 
 #### Option 3: Compile it yourself
 Simply clone the repo, `cd` into the cloned folder, and compile it for linux.
 
+
 ### Windows
 TBA
 
-### Tested on
-The tool has been confirmed working on:
-
-- Fedora 42 Gnome (non flatpak version)
-- Steam deck
+## TODO
+- [ ] Windows support
+- [ ] Testing out Flatpak support
+- [ ] Auto close steam if running
+- [ ] Enable the Developer console by default
