@@ -1,21 +1,13 @@
-## Steam age bypass
-Bypasses the annoying age prompts in the Steam client, by patching certain files of the Steam client. This works regardles if Steam is restarted or not.
-Steam does not save your age in the client or either thier servers when u get promted. Hence, you keep getting these. This apperantly has something do do with legal stuff.
-
-## Support
-Only Linux is supported. If the need for other operating systems is required, ask me, open a issue, or create a pull request.
-
-### Tested on
-The tool has been confirmed working on:
-
-- Fedora 42 Gnome (non flatpak version)
-- Steam deck
+## Steam age bypass for the desktop client
+Steam often asks users to verify their age when accessing mature-rated games in the Store. This tool automatically bypasses that prompt, saving a fixed birthdate so you won't need to re-enter it—even after restarting the client. For legal reasons, Steam does not store the entered age.
 
 ## Usage
-First, completly close steam. Second, choose one of the below 3 methods to run the age bypass.
 
-### 1. Direct run in terminal
-For you convienence a simple oneliner is provided that will download and run the steam age bypass from the releases.
+### Linux
+> Make sure **Steam is completely closed** before running.  
+> Flatpak installations are currently **untested**.
+
+#### Option 1: One-liner Install
 
 1. Open up a terminal.
 2. Run the following command:
@@ -23,20 +15,18 @@ For you convienence a simple oneliner is provided that will download and run the
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/aamaanaa/steam-age-bypass/main/steamagebypass.sh)"
 ```
 
-It will automaticly download and run the age bypass with a simple one liner. Source can be found in `steamagebypass.sh`
+#### Option 2: Download from releases
+You can download a precompiled executable from the releases. Make it executable with:
+-  ` chmod +x steam-age-bypass.elf` and run with `./steam-age-bypass.elf`
 
-### 2. Download from releases
-You may run the provided elf from the releases: https://github.com/aamaanaa/linux-steam-age-bypass/releases
-Make it executable with `chmod +x steam-age-bypass.elf` and run with `./steam-age-bypass.elf`
+#### Option 3: Compile it yourself
+Simply clone the repo, `cd` into the cloned folder, and compile it for linux.
 
-### 3. Compile it yourself
-Simply clone the repo, cd into the cloned folder, and compile it for linux.
+### Windows
+TBA
 
-## Security
+### Tested on
+The tool has been confirmed working on:
 
-### Virustotal
-See virustotal for the scan on the latest release:
-- https://www.virustotal.com/gui/file/baf6ddf56e10cc61b3b9ac0e6e71df502f132c49b527f653c56886a31ea502d2/details
-
-### UPX
-The steam age bypass is upx packed to reduce size and thus reducing download time, for the curl command and downloading from the releases. U can unpack it with `upx -d steam-age-bypass.elf`
+- Fedora 42 Gnome (non flatpak version)
+- Steam deck
