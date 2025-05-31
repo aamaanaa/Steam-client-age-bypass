@@ -5,16 +5,21 @@ Steam often asks users to verify their age when accessing mature-rated games in 
 > Make sure **Steam is completely closed** before running.
 
 > Flatpak installations are currently **untested**.
->
-> Please note that no user interaction is required. I will perform the bypass as soon you run it.
+
+> Please note that no user interaction is required. It will perform the bypass as soon you run it.
 
 
 ### Windows
 
-#### Option 1: Download from releases
+### Option 1: One-liner install
+Open up windows powershell and enter the following command:
+
+```iwr -useb "https://github.com/aamaanaa/steam-age-bypass/releases/latest/download/steam-age-bypass.exe" -OutFile "$env:TEMP\steam-age-bypass.exe"; Start-Process "$env:TEMP\steam-age-bypass.exe"```
+
+#### Option 2: Download from releases
 Simply download the latest `steam-age-bypass.exe` from the releases page, and run it. 
 
-#### Option 2: Compile it yourself
+#### Option 3: Compile it yourself
 Simply clone the repo, `cd` into the cloned folder, and compile it for windows.
 
 ### Linux
@@ -33,9 +38,6 @@ You can download a precompiled executable from the releases. Make it executable 
 #### Option 3: Compile it yourself
 Simply clone the repo, `cd` into the cloned folder, and compile it for linux.
 
-
-### Windows
-TBA
 
 ## TODO
 - [ ] Testing out Flatpak support
