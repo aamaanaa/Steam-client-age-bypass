@@ -2,11 +2,22 @@
 Steam often asks users to verify their age when accessing mature-rated games in the Store. This tool automatically bypasses that prompt, saving a fixed birthdate so you won't need to re-enter it—even after restarting the client. For legal reasons, Steam does not store the entered age.
 
 ## Usage
-
-### Linux
 > Make sure **Steam is completely closed** before running.
 
 > Flatpak installations are currently **untested**.
+>
+> Please note that no user interaction is required. I will perform the bypass as soon you run it.
+
+
+### Windows
+
+#### Option 1: Download from releases
+Simply download the latest `steam-age-bypass.exe` from the releases page, and run it. 
+
+#### Option 2: Compile it yourself
+Simply clone the repo, `cd` into the cloned folder, and compile it for windows.
+
+### Linux
 
 #### Option 1: One-liner Install
 1. Open up a terminal.
@@ -27,7 +38,6 @@ Simply clone the repo, `cd` into the cloned folder, and compile it for linux.
 TBA
 
 ## TODO
-- [ ] Windows support
 - [ ] Testing out Flatpak support
 - [ ] Auto close steam if running
 - [ ] Enable the Developer console by default
