@@ -2,11 +2,8 @@ package main
 
 import (
 	"database/sql"
-	"errors"
 	"fmt"
 	_ "github.com/mattn/go-sqlite3"
-	"os"
-	"path/filepath"
 )
 
 /*
@@ -21,9 +18,6 @@ For some legal reasons steam does not save this, so we need to do it this way.
 */
 
 var (
-	// Steam path where the cookie database is stored
-	cookiesPath = filepath.Join(".steam", "steam", "config", "htmlcache", "Cookies")
-
 	// Cookie values to be inserted
 	cookies = []interface{}{
 		[]interface{}{
@@ -31,7 +25,7 @@ var (
 			[]byte{}, "/", int64(20000000000000000), 0, 0, int64(13370000000000000), 1, 1, 1, -1, 2, 443, int64(13370000000000000), 1, 1,
 		},
 		[]interface{}{
-			int64(13370000000000000), "store.steampowered.com", "", "lastagecheckage", "1-January-1995",
+			int64(13370000000000000), "store.steampowered.com", "", "lastagecheckage", "20-August-1995",
 			[]byte{}, "/", int64(20000000000000000), 0, 0, int64(13370000000000000), 1, 1, 1, -1, 2, 443, int64(13370000000000000), 1, 1,
 		},
 		[]interface{}{
@@ -51,24 +45,6 @@ var (
 	) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 	`
 )
-
-/*
-getSteamCookiePath retrieves the path to the Steam cookies database, including the home directory.
-Returns an error if the path does not exist, or a string with the path if it does.
-*/
-func getSteamCookiePath() (string, error) {
-	home, err := os.UserHomeDir()
-	if err != nil {
-		return "", err
-	}
-
-	cookiePath := filepath.Join(home, cookiesPath)
-
-	if _, err := os.Stat(cookiePath); os.IsNotExist(err) {
-		return "", errors.New("steam cookies file not found at: Make sure Steam has been opened at least once")
-	}
-	return cookiePath, nil
-}
 
 /*
 insertCookies inserts the specified cookies into the SQLite database at the given path.
@@ -100,18 +76,18 @@ func insertCookies(dbPath string) (err error) {
 
 func main() {
 
-	fmt.Println("Getting Steam cookies path...")
+	fmt.Println("implementing bypass...")
 	dbPath, err := getSteamCookiePath()
 	if err != nil {
-		fmt.Println("Failure getting cookies path:", err)
+		fmt.Println("Failure: ", err)
 		return
 	}
 
-	fmt.Println("Inserting cookies into database...")
 	if err = insertCookies(dbPath); err != nil {
-		fmt.Println("Failure inserting cookies:", err)
+		fmt.Println("Failure: ", err)
 		return
 	}
 
-	fmt.Println("Steam age bypass cookies inserted successfully.")
+	fmt.Println("Bypass completed successfully! You can now open Steam and access the store without age verification.")
+
 }
