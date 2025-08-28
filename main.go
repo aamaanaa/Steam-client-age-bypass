@@ -6,17 +6,6 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 )
 
-/*
-The following program inserts cookies into the Steam SQLite database to permanently hide the age check in the store.
-
-For some legal reasons steam does not save this, so we need to do it this way.
-
-@TODO: Prevent double insertion of cookies.
-@TODO: Check if cookies already exist.
-@TODO: Autoclose steam if it is open.
-@TODO: modify options by parameters like if the user wants to change the cookie values for some reason.
-*/
-
 var (
 	// Cookie values to be inserted
 	cookies = []interface{}{
